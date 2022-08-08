@@ -1,0 +1,226 @@
+@import '_nullStyle.scss'; //обнуление стилей
+@import '_fonts.scss'; //шрифты
+
+@import '_header.scss';
+@import '_home.scss';
+@import '_footer.scss';
+@import '_itemPage.scss';
+@import '_cart.scss';
+@import '_slick.scss';
+
+body {
+  font-family: 'segoe Ui';
+}
+
+.wraper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 10px;
+}
+
+.main {
+  flex: 1 1 auto;
+
+  &__container {
+    padding: 15px 10px 25px 10px;
+  }
+}
+.active-link {
+  background: linear-gradient(to top, #79b260, #92d774);
+  color: #fff;
+}
+.btn {
+  border: solid 1px #52a452;
+  background: linear-gradient(to top, #51a451, #61c261);
+  color: #fff;
+  border-radius: 5px;
+  &:hover {
+    background: linear-gradient(to top, #6b9e55, #85c46a);
+    color: #fff;
+  }
+  &:active {
+    box-shadow: inset 1px 1px 7px #213621;
+  }
+}
+
+/*================Categories===========================*/
+.categories-menu {
+  // .categories-menu__container
+  &__container {
+    border: solid 1px #d8dce0;
+    padding: 11px 0px 76px;
+    min-width: 200px;
+  }
+
+  // .categories-menu__header
+  &__header {
+    font-size: 24px;
+    font-weight: 300;
+    color: #6b6969;
+    padding: 0 20px;
+    margin-bottom: 15px;
+  }
+
+  // .categories-menu__category
+  &__category {
+    font-size: 17px;
+    font-weight: 600;
+    color: #696969;
+    padding-bottom: 0px;
+
+    p {
+      padding: 7px 20px;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(to top, #6b9e55, #85c46a);
+        color: #fff;
+      }
+      &:active {
+        box-shadow: inset 1px 1px 7px #213621;
+      }
+    }
+    &:last-child {
+      li {
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  // .categories-menu__subcategory
+  &__subcategory {
+    color: #555454;
+    font-size: 15px;
+    font-weight: 400;
+    li {
+      line-height: 1.1;
+      padding: 5px 24px;
+      border-bottom: 1px solid #ededed;
+      cursor: pointer;
+      &:hover {
+        background: linear-gradient(to top, #6b9e55, #85c46a);
+        color: #fff;
+      }
+      &:active {
+        box-shadow: inset 1px 1px 7px #213621;
+      }
+    }
+  }
+}
+/*================/Categories===========================*/
+
+/*================products==============================*/
+.products {
+  padding: 25px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px 50px;
+
+  // .products__item
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 110px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+      transform: scale(1.03);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+.item-product {
+  position: relative;
+
+  // .item-product__sale
+  &__sale {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f05356;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    p {
+      font-size: 19px;
+      font-weight: 700;
+    }
+    span {
+      font-size: 13px;
+    }
+  }
+
+  // .item-product__image
+  &__image {
+    padding: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 15px -5px rgb(126, 124, 124);
+    margin-bottom: 12px;
+    img {
+      width: 100px;
+      height: 150px;
+      object-fit: cover;
+    }
+  }
+
+  // .item-product__title
+  &__title {
+    text-align: center;
+    font-size: 15px;
+    color: #595959;
+    margin-bottom: 7px;
+  }
+
+  // .item-product__price
+  &__price {
+    font-family: 'Helvetica';
+    text-align: center;
+    font-size: 22px;
+    color: #f05356;
+  }
+}
+/*================/products==============================*/
+
+/*=================pagination=============================*/
+.pagination {
+  display: flex;
+  justify-content: end;
+
+  // .pagination__list
+  &__list {
+    display: flex;
+    column-gap: 4px;
+    margin: 0 20px;
+    li {
+      font-family: 'Helvetica';
+      color: #646464;
+      font-size: 16px;
+      padding: 5px 7px 3px;
+      cursor: pointer;
+      &:hover {
+        outline: 1px solid #f2f3f3;
+        border-bottom: 4px solid #cdf7a0;
+      }
+    }
+  }
+}
+.current-page {
+  border: 1px solid #d8dce0;
+  border-bottom: 4px solid #95bd6b;
+}
+/*=================/pagination=============================*/
