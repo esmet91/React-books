@@ -1237,6 +1237,7 @@ body {
 }
 .item-product__title {
   text-align: center;
+  flex: 1 1 auto;
   font-size: 15px;
   color: #595959;
   margin-bottom: 7px;
