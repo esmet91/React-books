@@ -1,4 +1,5 @@
 import React from 'react';
+import Pagination from '../Pagination';
 import Products from '../Products';
 
 const Tabs = ({ books }) => {
@@ -18,14 +19,28 @@ const Tabs = ({ books }) => {
   };
   /*-------------------------------------------------------------- */
 
+  /*получаем все книги, которые относятся к свойству таба */
   const currentBooks = books.filter((obj) => obj.tab === activeTab);
+  /**=============================================================== */
 
+  /**==================== Пагинация =================================== */
+
+  const [currentPage, setCurrentPage] = React.useState(1);
+  const [postsPerPage] = React.useState(15);
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentItem = currentBooks.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (PageNumber) => setCurrentPage(PageNumber);
+
+  /**======================= /Пагинация ================================ */
   return (
     <>
       <ul className="book-page__nav">
         {tabTitles.map((tabName, i) => (
           <li
-            onClick={() => changeActiveTab(tabName)}
+            onClick={() => (changeActiveTab(tabName), paginate(1))}
             key={i}
             className={
               activeTab === tabName ? 'book-page__tab-title active-tab' : 'book-page__tab-title'
@@ -33,23 +48,16 @@ const Tabs = ({ books }) => {
             {tabName}
           </li>
         ))}
-        {/* <li className="book-page__tab-title">Best sellers</li>
-        <li className="book-page__tab-title active-tab">New Arrivals</li>
-        <li className="book-page__tab-title">Used Books</li>
-        <li className="book-page__tab-title">Special Offers</li> */}
       </ul>
       <div className="book-page__content">
         <div className="book-page__item">
-          <Products books={currentBooks} />
-          <div className="pagination">
-            <ul className="pagination__list">
-              <li className="current-page">1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-            </ul>
-          </div>
+          <Products books={currentItem} />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={currentBooks.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         </div>
       </div>
     </>
