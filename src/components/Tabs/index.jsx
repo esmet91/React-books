@@ -26,11 +26,13 @@ const Tabs = ({ books }) => {
   /**==================== Пагинация =================================== */
 
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(15);
+  const [postsPerPage] = React.useState(10);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentItem = currentBooks.slice(indexOfFirstPost, indexOfLastPost);
+
+  const pagesCount = Math.ceil(currentBooks.length / postsPerPage);
 
   const paginate = (PageNumber) => setCurrentPage(PageNumber);
 
@@ -54,7 +56,7 @@ const Tabs = ({ books }) => {
           <Products books={currentItem} />
           <Pagination
             postsPerPage={postsPerPage}
-            totalPosts={currentBooks.length}
+            pagesCount={pagesCount}
             paginate={paginate}
             currentPage={currentPage}
           />
