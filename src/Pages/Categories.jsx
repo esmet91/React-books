@@ -35,7 +35,7 @@ const Categories = ({ books }) => {
   /**==================== Пагинация =================================== */
 
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(3);
+  const [postsPerPage] = React.useState(10);
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
