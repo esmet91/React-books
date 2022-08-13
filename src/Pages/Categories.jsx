@@ -19,6 +19,8 @@ const Categories = ({ books }) => {
   const booksSort =
     category === ''
       ? []
+      : category === 'ALL'
+      ? books
       : books
           .filter((obj) => {
             if (obj.category === category || obj.subCategory === category) {
