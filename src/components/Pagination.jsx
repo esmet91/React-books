@@ -10,10 +10,10 @@ const Pagination = ({ pagesCount, paginate, currentPage }) => {
   // const didMount = React.useRef(false);
   React.useEffect(() => {
     // if (didMount.current) {
-    //   window.scrollTo({
-    //     top: 340,
-    //     behavior: 'smooth',
-    //   });
+    // window.scrollTo({
+    //   top: 340,
+    //   behavior: 'smooth',
+    // });
     // } else didMount.current = true;
 
     let tempPageNumbers = [...pageNumbers];

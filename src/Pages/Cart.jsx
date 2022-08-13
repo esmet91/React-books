@@ -4,7 +4,7 @@ function Cart() {
   return (
     <div class="cart">
       <div class="cart__header">
-        <h1 class="cart__title">
+        <h1 class="cart__title title-page">
           Cart: <span>3</span>
         </h1>
         <button class="cart__clear">Удалить все товары</button>

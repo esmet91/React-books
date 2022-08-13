@@ -25,7 +25,7 @@ function Aside({ items }) {
   const categoriesTitles = Object.keys(categories);
 
   const [checkedCategory, setCheckedCategory] = React.useState('');
-  console.log(checkedCategory);
+  // console.log(checkedCategory);
   return (
     <div className="categories-menu__container">
       <div className="categories-menu__header">Categories</div>
