@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Aside({ items }) {
   /* ----------------------Получаем категории и подкатегории из JSONа------------*/
@@ -32,20 +33,23 @@ function Aside({ items }) {
         <div className="categories-menu__category">
           {categoriesTitles.map((value, index) => (
             <div key={index} className="categories-menu__category">
-              <p
-                className={value === checkedCategory ? 'active-link' : ''}
-                onClick={() => setCheckedCategory(value)}>
-                {value}
-              </p>
+              <Link to="/categories">
+                <p
+                  className={value === checkedCategory ? 'active-link' : ''}
+                  onClick={() => setCheckedCategory(value)}>
+                  {value}
+                </p>
+              </Link>
               <ul className="categories-menu__subcategory">
                 {categories[value].length > 0 &&
                   categories[value].map((subCategory, index) => (
-                    <li
-                      className={subCategory === checkedCategory ? 'active-link' : ''}
-                      onClick={() => setCheckedCategory(subCategory)}
-                      key={index}>
-                      {subCategory}
-                    </li>
+                    <Link key={index} to="/categories">
+                      <li
+                        className={subCategory === checkedCategory ? 'active-link' : ''}
+                        onClick={() => setCheckedCategory(subCategory)}>
+                        {subCategory}
+                      </li>
+                    </Link>
                   ))}
               </ul>
             </div>

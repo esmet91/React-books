@@ -9,6 +9,8 @@ import Home from './Pages/Home';
 import Categories from './Pages/Categories';
 
 import books from './assets/books.json';
+import BookPage from './Pages/BookPage';
+import Cart from './Pages/Cart';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Home books={books} />} />
               <Route path="/categories" element={<Categories books={books} />} />
+              <Route path="/bookpage" element={<BookPage />} />
+              <Route path="/cart" element={<Cart />} />
               <Route path="*" element={<div>NOT FOUND</div>} />
             </Routes>
           </div>
