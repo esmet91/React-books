@@ -11,6 +11,10 @@
 body {
   font-family: 'segoe Ui';
 }
+#root,
+.App {
+  height: 100%;
+}
 
 .wraper {
   display: flex;
@@ -27,7 +31,7 @@ body {
 
 .main {
   flex: 1 1 auto;
-
+  margin-top: 182px;
   &__container {
     padding: 15px 10px 25px 10px;
   }

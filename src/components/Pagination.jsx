@@ -7,14 +7,15 @@ const Pagination = ({ pagesCount, paginate, currentPage }) => {
   }
 
   const [arrOfPageNumbers, setArrOfPageNumbers] = React.useState([]);
-  const didMount = React.useRef(false);
+  // const didMount = React.useRef(false);
   React.useEffect(() => {
-    if (didMount.current) {
-      window.scrollTo({
-        top: 340,
-        behavior: 'smooth',
-      });
-    } else didMount.current = true;
+    // if (didMount.current) {
+    //   window.scrollTo({
+    //     top: 340,
+    //     behavior: 'smooth',
+    //   });
+    // } else didMount.current = true;
+
     let tempPageNumbers = [...pageNumbers];
 
     let dotsInitial = '...';

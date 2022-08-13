@@ -326,10 +326,6 @@ h6 {
   box-shadow: inset 1px 1px 7px #213621;
 }
 
-.main {
-  margin-top: 182px;
-}
-
 .banner-main {
   justify-content: center;
   display: flex;
@@ -1085,6 +1081,11 @@ body {
   font-family: "segoe Ui";
 }
 
+#root,
+.App {
+  height: 100%;
+}
+
 .wraper {
   display: flex;
   flex-direction: column;
@@ -1101,6 +1102,7 @@ body {
 
 .main {
   flex: 1 1 auto;
+  margin-top: 182px;
 }
 .main__container {
   padding: 15px 10px 25px 10px;

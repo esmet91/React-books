@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Categories({ items }) {
+function Aside({ items }) {
   /* ----------------------Получаем категории и подкатегории из JSONа------------*/
   function categoriesFromObject(arr, cat, subCat) {
     let result = { ALL: [] };
@@ -23,6 +23,8 @@ function Categories({ items }) {
 
   const categoriesTitles = Object.keys(categories);
 
+  const [checkedCategory, setCheckedCategory] = React.useState('');
+  console.log(checkedCategory);
   return (
     <div className="categories-menu__container">
       <div className="categories-menu__header">Categories</div>
@@ -30,10 +32,21 @@ function Categories({ items }) {
         <div className="categories-menu__category">
           {categoriesTitles.map((value, index) => (
             <div key={index} className="categories-menu__category">
-              <p>{value}</p>
+              <p
+                className={value === checkedCategory ? 'active-link' : ''}
+                onClick={() => setCheckedCategory(value)}>
+                {value}
+              </p>
               <ul className="categories-menu__subcategory">
                 {categories[value].length > 0 &&
-                  categories[value].map((subCategory, index) => <li key={index}>{subCategory}</li>)}
+                  categories[value].map((subCategory, index) => (
+                    <li
+                      className={subCategory === checkedCategory ? 'active-link' : ''}
+                      onClick={() => setCheckedCategory(subCategory)}
+                      key={index}>
+                      {subCategory}
+                    </li>
+                  ))}
               </ul>
             </div>
           ))}
@@ -43,4 +56,4 @@ function Categories({ items }) {
   );
 }
 
-export default Categories;
+export default Aside;

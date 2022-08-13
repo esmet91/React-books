@@ -54,12 +54,7 @@ const Tabs = ({ books }) => {
       <div className="book-page__content">
         <div className="book-page__item">
           <Products books={currentItem} />
-          <Pagination
-            postsPerPage={postsPerPage}
-            pagesCount={pagesCount}
-            paginate={paginate}
-            currentPage={currentPage}
-          />
+          <Pagination pagesCount={pagesCount} paginate={paginate} currentPage={currentPage} />
         </div>
       </div>
     </>
