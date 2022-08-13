@@ -1,6 +1,9 @@
 import React from 'react';
+import { AppContext } from '../App';
 
 const Pagination = ({ pagesCount, paginate, currentPage }) => {
+  const { category } = React.useContext(AppContext);
+
   const pageNumbers = [];
   for (let index = 1; index <= pagesCount; index++) {
     pageNumbers.push(index);
@@ -45,7 +48,7 @@ const Pagination = ({ pagesCount, paginate, currentPage }) => {
     }
 
     setArrOfPageNumbers(tempPageNumbers);
-  }, [currentPage, pagesCount]);
+  }, [currentPage, pagesCount, category]);
 
   return (
     <div className="pagination">

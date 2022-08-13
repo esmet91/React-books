@@ -17,10 +17,12 @@ export const AppContext = React.createContext();
 
 function App() {
   const [searchValue, setSearchValue] = React.useState('');
+  const [category, setCategory] = React.useState('');
+
   return (
     <div className="App">
       <div className="wraper">
-        <AppContext.Provider value={{ searchValue, setSearchValue }}>
+        <AppContext.Provider value={{ searchValue, setSearchValue, category, setCategory }}>
           <Header />
           <main className="main">
             <div className="main__container container">

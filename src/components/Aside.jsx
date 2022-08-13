@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../App';
 
 function Aside({ items }) {
   /* ----------------------Получаем категории и подкатегории из JSONа------------*/
@@ -24,8 +25,9 @@ function Aside({ items }) {
 
   const categoriesTitles = Object.keys(categories);
 
-  const [checkedCategory, setCheckedCategory] = React.useState('');
-  // console.log(checkedCategory);
+  const { category, setCategory } = React.useContext(AppContext);
+
+  console.log(category);
   return (
     <div className="categories-menu__container">
       <div className="categories-menu__header">Categories</div>
@@ -35,8 +37,8 @@ function Aside({ items }) {
             <div key={index} className="categories-menu__category">
               <Link to="/categories">
                 <p
-                  className={value === checkedCategory ? 'active-link' : ''}
-                  onClick={() => setCheckedCategory(value)}>
+                  className={value === category ? 'active-link' : ''}
+                  onClick={() => setCategory(value)}>
                   {value}
                 </p>
               </Link>
@@ -45,8 +47,8 @@ function Aside({ items }) {
                   categories[value].map((subCategory, index) => (
                     <Link key={index} to="/categories">
                       <li
-                        className={subCategory === checkedCategory ? 'active-link' : ''}
-                        onClick={() => setCheckedCategory(subCategory)}>
+                        className={subCategory === category ? 'active-link' : ''}
+                        onClick={() => setCategory(subCategory)}>
                         {subCategory}
                       </li>
                     </Link>
