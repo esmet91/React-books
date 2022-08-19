@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 function Aside({ items }) {
   /* ----------------------Получаем категории и подкатегории из JSONа------------*/
   function categoriesFromObject(arr, cat, subCat) {
-    let result = { ALL: [] };
+    let result = { ВСЕ: [] };
 
     const categoryKeys = arr
       .map((obj) => obj[cat])

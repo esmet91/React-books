@@ -18,7 +18,7 @@ const Categories = ({ books }) => {
     });
 
     if (category === '') {
-      dispatch(setCategory('ALL'));
+      dispatch(setCategory('ВСЕ'));
     }
   }, [category]);
 
@@ -31,7 +31,7 @@ const Categories = ({ books }) => {
   const booksSort =
     category === ''
       ? []
-      : category === 'ALL'
+      : category === 'ВСЕ'
       ? books
       : books
           .filter((obj) => {
