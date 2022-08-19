@@ -1,20 +1,32 @@
 import React from 'react';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { setCategory } from '../Redux/Slices/categorySlice';
+
 import Aside from '../components/Aside';
 import Products from '../components/Products';
 import Pagination from '../components/Pagination';
 
-import { AppContext } from '../App';
-
 const Categories = ({ books }) => {
-  const { category } = React.useContext(AppContext);
+  const category = useSelector((state) => state.category.category);
+  const dispatch = useDispatch();
 
   React.useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+
+    if (category === '') {
+      dispatch(setCategory('ALL'));
+    }
   }, [category]);
+
+  React.useEffect(() => {
+    return () => {
+      dispatch(setCategory(''));
+    };
+  }, []);
 
   const booksSort =
     category === ''
@@ -30,7 +42,7 @@ const Categories = ({ books }) => {
           })
           .map((obj) => obj);
 
-  console.log(booksSort);
+  //console.log(booksSort);
 
   /**==================== Пагинация =================================== */
 

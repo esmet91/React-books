@@ -1,6 +1,7 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCategory } from '../Redux/Slices/categorySlice';
 import { Link } from 'react-router-dom';
-import { AppContext } from '../App';
 
 function Aside({ items }) {
   /* ----------------------Получаем категории и подкатегории из JSONа------------*/
@@ -25,7 +26,8 @@ function Aside({ items }) {
 
   const categoriesTitles = Object.keys(categories);
 
-  const { category, setCategory } = React.useContext(AppContext);
+  const category = useSelector((state) => state.category.category);
+  const dispatch = useDispatch();
 
   console.log(category);
   return (
@@ -38,7 +40,7 @@ function Aside({ items }) {
               <Link to="/categories">
                 <p
                   className={value === category ? 'active-link' : ''}
-                  onClick={() => setCategory(value)}>
+                  onClick={() => dispatch(setCategory(value))}>
                   {value}
                 </p>
               </Link>
@@ -48,7 +50,7 @@ function Aside({ items }) {
                     <Link key={index} to="/categories">
                       <li
                         className={subCategory === category ? 'active-link' : ''}
-                        onClick={() => setCategory(subCategory)}>
+                        onClick={() => dispatch(setCategory(subCategory))}>
                         {subCategory}
                       </li>
                     </Link>

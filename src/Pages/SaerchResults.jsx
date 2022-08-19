@@ -1,12 +1,12 @@
-import React, { useEffect } from 'react';
-import { AppContext } from '../App';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 import Products from '../components/Products';
 
 import items from '../assets/books.json';
 
 const SaerchResults = () => {
-  const { searchValue } = React.useContext(AppContext);
+  const searchValue = useSelector((state) => state.search.value);
 
   const search =
     searchValue === ''
