@@ -42,6 +42,11 @@ const Tabs = ({ books }) => {
   const pagesCount = Math.ceil(currentBooks.length / postsPerPage);
 
   /**======================= /Пагинация ================================ */
+
+  React.useEffect(() => {
+    paginate(1);
+    return () => {};
+  }, []); //--- при первом рендере значение пагинации 1
   return (
     <>
       <ul className="book-page__nav">
