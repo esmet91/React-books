@@ -1,6 +1,8 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../Redux/Slices/categorySlice';
+import { setCurrentPage } from '../Redux/Slices/paginationSlice';
+
 import { Link } from 'react-router-dom';
 
 function Aside({ items }) {
@@ -29,6 +31,11 @@ function Aside({ items }) {
   const category = useSelector((state) => state.category.category);
   const dispatch = useDispatch();
 
+  //функция перевода пагинации на первую страницу
+  const paginate = (number) => {
+    dispatch(setCurrentPage(number));
+  };
+
   console.log(category);
   return (
     <div className="categories-menu__container">
@@ -40,7 +47,7 @@ function Aside({ items }) {
               <Link to="/categories">
                 <p
                   className={value === category ? 'active-link' : ''}
-                  onClick={() => dispatch(setCategory(value))}>
+                  onClick={() => dispatch(setCategory(value), paginate(1))}>
                   {value}
                 </p>
               </Link>
@@ -50,7 +57,7 @@ function Aside({ items }) {
                     <Link key={index} to="/categories">
                       <li
                         className={subCategory === category ? 'active-link' : ''}
-                        onClick={() => dispatch(setCategory(subCategory))}>
+                        onClick={() => dispatch(setCategory(subCategory), paginate(1))}>
                         {subCategory}
                       </li>
                     </Link>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../Redux/Slices/categorySlice';
+import { setCurrentPage } from '../Redux/Slices/paginationSlice';
 
 import Aside from '../components/Aside';
 import Products from '../components/Products';
@@ -45,17 +46,17 @@ const Categories = ({ books }) => {
   //console.log(booksSort);
 
   /**==================== Пагинация =================================== */
+  const currentPage = useSelector((state) => state.pagination.currentPage);
 
-  const [currentPage, setCurrentPage] = React.useState(1);
+  const paginate = (number) => {
+    dispatch(setCurrentPage(number));
+  };
+
   const [postsPerPage] = React.useState(10);
-
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentItem = booksSort.slice(indexOfFirstPost, indexOfLastPost);
-
   const pagesCount = Math.ceil(booksSort.length / postsPerPage);
-
-  const paginate = (PageNumber) => setCurrentPage(PageNumber);
 
   /**======================= /Пагинация ================================ */
 

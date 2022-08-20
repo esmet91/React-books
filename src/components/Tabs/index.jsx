@@ -2,6 +2,9 @@ import React from 'react';
 import Pagination from '../Pagination';
 import Products from '../Products';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrentPage } from '../../Redux/Slices/paginationSlice';
+
 const Tabs = ({ books }) => {
   /*Из всех обьектов книг фильтруем по наличию свойства tab и 
     создаем массив значений свойства "tab" отсекая повторяющиеся элементы */
@@ -25,16 +28,18 @@ const Tabs = ({ books }) => {
 
   /**==================== Пагинация =================================== */
 
-  const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(10);
+  const currentPage = useSelector((state) => state.pagination.currentPage);
+  const dispatch = useDispatch();
 
+  const paginate = (number) => {
+    dispatch(setCurrentPage(number));
+  };
+
+  const [postsPerPage] = React.useState(10);
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentItem = currentBooks.slice(indexOfFirstPost, indexOfLastPost);
-
   const pagesCount = Math.ceil(currentBooks.length / postsPerPage);
-
-  const paginate = (PageNumber) => setCurrentPage(PageNumber);
 
   /**======================= /Пагинация ================================ */
   return (
