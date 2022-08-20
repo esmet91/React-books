@@ -16,7 +16,7 @@ const Tabs = ({ books }) => {
   //const tabTitles = ['Best sellers', 'New Arivals', 'Used Books', 'Special Offers'];
 
   /*----Создаем состояние, в котором храним текущую вкладку Таба */
-  const [activeTab, setActiveTab] = React.useState('Best sellers');
+  const [activeTab, setActiveTab] = React.useState(tabTitles[0]);
   const changeActiveTab = (value) => {
     setActiveTab(value);
   };

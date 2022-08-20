@@ -39,7 +39,7 @@ function Aside({ items }) {
   console.log(category);
   return (
     <div className="categories-menu__container">
-      <div className="categories-menu__header">Categories</div>
+      <div className="categories-menu__header">Категории</div>
       <nav className="categories-menu__body">
         <div className="categories-menu__category">
           {categoriesTitles.map((value, index) => (

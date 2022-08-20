@@ -9,7 +9,7 @@
     "price": "439",
     "category": "Хобби, досуг",
     "subCategory": "Кулинария",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "1",
@@ -21,7 +21,7 @@
     "price": "689",
     "category": "Хобби, досуг",
     "subCategory": "Кулинария",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "2",
@@ -33,7 +33,7 @@
     "price": "449",
     "category": "Хобби, досуг",
     "subCategory": "Кулинария",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "3",
@@ -45,7 +45,7 @@
     "price": "419",
     "category": "Хобби, досуг",
     "subCategory": "Кулинария",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "4",
@@ -56,7 +56,7 @@
     "price": "349",
     "category": "Хобби, досуг",
     "subCategory": "Кулинария",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "5",
@@ -67,7 +67,7 @@
     "price": "419",
     "category": "Хобби, досуг",
     "subCategory": "Сад и огород",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "6",
@@ -78,7 +78,7 @@
     "price": "649",
     "category": "Хобби, досуг",
     "subCategory": "Сад и огород",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "7",
@@ -89,7 +89,7 @@
     "price": "419",
     "category": "Хобби, досуг",
     "subCategory": "Сад и огород",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "8",
@@ -100,7 +100,7 @@
     "price": "549",
     "category": "Хобби, досуг",
     "subCategory": "Сад и огород",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "9",
@@ -111,7 +111,7 @@
     "price": "200",
     "category": "Хобби, досуг",
     "subCategory": "Сад и огород",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "10",
@@ -122,7 +122,7 @@
     "price": "297",
     "category": "Хобби, досуг",
     "subCategory": "Растения",
-    "tab": "New Arivals"
+    "tab": "Новинки"
   },
   {
     "id": "11",
@@ -133,7 +133,7 @@
     "price": "359",
     "category": "Хобби, досуг",
     "subCategory": "Природа и животные",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "12",
@@ -144,7 +144,7 @@
     "price": "300",
     "category": "Хобби, досуг",
     "subCategory": "Природа и животные",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "13",
@@ -156,7 +156,7 @@
     "price": "349",
     "category": "Хобби, досуг",
     "subCategory": "Природа и животные",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "14",
@@ -167,7 +167,7 @@
     "price": "389",
     "category": "Хобби, досуг",
     "subCategory": "Природа и животные",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "15",
@@ -178,7 +178,7 @@
     "price": "449",
     "category": "История",
     "subCategory": "Документальная литература",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "16",
@@ -189,7 +189,7 @@
     "price": "659",
     "category": "История",
     "subCategory": "Документальная литература",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "17",
@@ -200,7 +200,7 @@
     "price": "449",
     "category": "История",
     "subCategory": "Документальная литература",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "18",
@@ -210,7 +210,7 @@
     "price": "459",
     "category": "История",
     "subCategory": "Документальная литература",
-    "tab": "Used Books"
+    "tab": "Подержанные "
   },
   {
     "id": "19",
@@ -221,7 +221,7 @@
     "price": "269",
     "category": "История",
     "subCategory": "Документальная литература",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "20",
@@ -232,7 +232,7 @@
     "price": "579",
     "category": "История",
     "subCategory": "Книги о путешествиях",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "21",
@@ -243,7 +243,7 @@
     "price": "309",
     "category": "История",
     "subCategory": "Книги о путешествиях",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "22",
@@ -254,7 +254,7 @@
     "price": "400",
     "category": "История",
     "subCategory": "Книги о путешествиях",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "23",
@@ -265,7 +265,7 @@
     "price": "299",
     "category": "История",
     "subCategory": "Биографии и мемуары",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "24",
@@ -278,7 +278,7 @@
     "category": "История",
     "subCategory": "Биографии и мемуары",
     "sale": 30,
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "25",
@@ -290,7 +290,7 @@
     "price": "399",
     "category": "История",
     "subCategory": "Биографии и мемуары",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "26",
@@ -301,7 +301,7 @@
     "price": "399",
     "category": "История",
     "subCategory": "Биографии и мемуары",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "27",
@@ -313,7 +313,7 @@
     "sale": 35,
     "category": "История",
     "subCategory": "Историческая литература",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "28",
@@ -324,7 +324,7 @@
     "price": "449",
     "category": "Детские книги",
     "subCategory": "Комиксы",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "29",
@@ -335,7 +335,7 @@
     "price": "379",
     "category": "Детские книги",
     "subCategory": "Сказки",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "30",
@@ -346,7 +346,7 @@
     "price": "439",
     "category": "Детские книги",
     "subCategory": "Сказки",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "31",
@@ -357,7 +357,7 @@
     "price": "139",
     "category": "Детские книги",
     "subCategory": "Внеклассное чтение",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "32",
@@ -368,7 +368,7 @@
     "price": "89",
     "category": "Детские книги",
     "subCategory": "Внеклассное чтение",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "33",
@@ -379,7 +379,7 @@
     "price": "329",
     "category": "Детские книги",
     "subCategory": "Детская фантастика",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "34",
@@ -390,7 +390,7 @@
     "price": "500",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Special Offers"
+    "tab": "Спец. предложение"
   },
   {
     "id": "35",
@@ -401,7 +401,7 @@
     "price": "835",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "36",
@@ -412,7 +412,7 @@
     "price": "614",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "37",
@@ -423,7 +423,7 @@
     "price": "662",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "38",
@@ -434,7 +434,7 @@
     "price": "593",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "39",
@@ -445,7 +445,7 @@
     "price": "487",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "40",
@@ -456,7 +456,7 @@
     "price": "540",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "41",
@@ -467,7 +467,7 @@
     "price": "614",
     "category": "Прочее",
     "subCategory": "Фэнтези",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "42",
@@ -479,7 +479,7 @@
     "category": "Прочее",
     "subCategory": "Фэнтези",
     "sale": 19,
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "43",
@@ -490,7 +490,7 @@
     "price": "300",
     "category": "Прочее",
     "subCategory": "Детективы",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "44",
@@ -501,7 +501,7 @@
     "price": "642",
     "category": "Прочее",
     "subCategory": "Детективы",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "45",
@@ -513,7 +513,7 @@
     "category": "Прочее",
     "subCategory": "Детективы",
     "sale": 19,
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "46",
@@ -524,7 +524,7 @@
     "price": "272",
     "category": "Прочее",
     "subCategory": "Рассказы",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   },
   {
     "id": "47",
@@ -535,6 +535,6 @@
     "price": "580",
     "category": "Прочее",
     "subCategory": "Детективы",
-    "tab": "Best sellers"
+    "tab": "Бестселлеры"
   }
 ]
