@@ -30,7 +30,12 @@ const SaerchResults = () => {
   return (
     <div>
       <h1 className="title-page">Результат поиска...</h1>
-      {searchValue && <Products books={search} />}
+      {searchValue &&
+        (search.length > 0 ? (
+          <Products books={search} />
+        ) : (
+          <div className="title-page">По вашему запросу ничего не найдено :(</div>
+        ))}
     </div>
   );
 };

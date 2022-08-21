@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { setSearchValue } from '../../Redux/Slices/searchSlice';
 
 import { Link } from 'react-router-dom';
@@ -14,11 +14,30 @@ const Search = () => {
     setSearchOnClick(event.target.value);
   };
 
+  const inputSearch = React.useRef();
+
+  // const test = (e) => {
+  //   if (!serchOnClick) {
+  //     if (!e.path.includes(inputSearch.current)) {
+  //       console.log('клик вне инпута');
+  //       setSearchOnClick('');
+  //     }
+  //   }
+  // };
+  // React.useEffect(() => {
+  //   document.body.addEventListener('click', test);
+  // }, []);
+
   return (
     <form action="#" className="body-header__search search-header">
-      <label className="search-header__label">
-        <input type="text" className="search-header__input" onChange={showInput} />
-        <Link to="/searchresult">
+      <label ref={inputSearch} className="search-header__label">
+        <input
+          value={serchOnClick}
+          type="text"
+          className="search-header__input"
+          onChange={showInput}
+        />
+        <Link to={serchOnClick ? '/searchresult' : '#'}>
           <button
             onClick={() => dispatch(setSearchValue(serchOnClick))}
             className="search-header__button">

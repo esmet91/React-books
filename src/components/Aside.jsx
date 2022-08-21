@@ -31,12 +31,10 @@ function Aside({ items }) {
   const category = useSelector((state) => state.category.category);
   const dispatch = useDispatch();
 
-  //функция перевода пагинации на первую страницу
   const paginate = (number) => {
     dispatch(setCurrentPage(number));
   };
 
-  console.log(category);
   return (
     <div className="categories-menu__container">
       <div className="categories-menu__header">Категории</div>
