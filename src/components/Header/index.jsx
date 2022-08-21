@@ -36,7 +36,7 @@ function Header() {
                 </div>
               </div>
               <div className="cart-header__bottom bottom-cart">
-                <div className="bottom-cart__price">₽ 125.0</div>
+                <div className="bottom-cart__price">125.0₽</div>
                 <button className="bottom-cart__button">Проверить</button>
               </div>
             </div>

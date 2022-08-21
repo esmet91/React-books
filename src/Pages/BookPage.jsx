@@ -1,8 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 function BookPage() {
+  React.useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, []);
+
   const item = useSelector((state) => state.item.item);
-  console.log(item);
+
   return (
     <>
       <div className="breadcrumds">
@@ -22,28 +29,27 @@ function BookPage() {
           <img src={item.imageUrl} alt="" />
         </div>
         <div className="book-info__body body-book-info">
-          <h1 className="body-book-info__title">Star Wars Episode I</h1>
-          <p className="body-book-info__text">
-            The Star Wars Episode I: The Phantom Menace novelization was written by Terry Brooks and
-            published on April 21, 1999 by Del Rey. It is based on the script of the movie of the
-            same name. Narration for the abridged audio version was performed by Michael Cumpsty.
-            The unabridged version was performed by Alexander Adams. On January 31, 2012, a new
-            paperback edition
-          </p>
+          <h1 className="body-book-info__title">{item.title}</h1>
+          <p className="body-book-info__text">{item.description}</p>
           <div className="body-book-info__price price-book-info">
             <div className="price-book-info__price">
               <div className="price-book-info__item">
                 <p className="price-book-info__item-price">
-                  Our price : <span>$150</span>
+                  Цена : <span>{item.price}₽</span>
                 </p>
-                <p className="price-book-info__sale-info">Was $ 200 Save 20%</p>
+                {item.sale && (
+                  <p className="price-book-info__sale-info">
+                    Скидка {item.sale}%. Старая цена{' '}
+                    {Number(item.price) + (Number(item.price) * Number(item.sale)) / 100}{' '}
+                  </p>
+                )}
               </div>
               <div className="price-book-info__item">
-                <button className="price-book-info__button btn">Add to cart</button>
+                <button className="price-book-info__button btn">В корзину</button>
               </div>
             </div>
             <div className="price-book-info__pay">
-              <p className="price-book-info__pay-scure">Safe, Secure Shopping</p>
+              <p className="price-book-info__pay-scure">Ваши покупки безопасны</p>
               <ul className="price-book-info__pay-list">
                 <li>
                   <img src="./src/paypal.png" alt="" />
