@@ -10,6 +10,7 @@ function BookItem({ books }) {
   const selectingItem = (obj) => {
     dispatch(setSelectItem(obj));
   };
+
   return (
     <>
       {books.length > 0 &&
@@ -30,7 +31,7 @@ function BookItem({ books }) {
               <img src={obj.imageUrl} alt="" />
             </div>
             <h2 className="item-product__title">{obj.title}</h2>
-            <p className="item-product__price">${obj.price}</p>
+            <p className="item-product__price">{obj.price} ₽</p>
           </Link>
         ))}
     </>

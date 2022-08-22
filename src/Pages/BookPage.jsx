@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setCategory } from '../Redux/Slices/categorySlice';
+import { addToCart } from '../Redux/Slices/itemSlice';
 
 import { Link } from 'react-router-dom';
 
@@ -18,6 +19,13 @@ function BookPage() {
   const selectedCategory = (categoryName) => {
     dispatch(setCategory(categoryName));
   };
+
+  const addToCarClick = (obj) => {
+    dispatch(addToCart(obj));
+  };
+
+  const cartItems = useSelector((state) => state.item.itemCart);
+  const itemInCart = cartItems.find((obj) => obj.id === item.id);
 
   return (
     <>
@@ -72,7 +80,17 @@ function BookPage() {
                 )}
               </div>
               <div className="price-book-info__item">
-                <button className="price-book-info__button btn">В корзину</button>
+                {!itemInCart ? (
+                  <button
+                    onClick={() => addToCarClick(item)}
+                    className="price-book-info__button btn">
+                    Добавить корзину
+                  </button>
+                ) : (
+                  <Link to="/cart">
+                    <button className="price-book-info__button btn">Оформить заказ</button>
+                  </Link>
+                )}
               </div>
             </div>
             <div className="price-book-info__pay">
