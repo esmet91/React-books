@@ -26,6 +26,7 @@ const Categories = ({ books }) => {
   React.useEffect(() => {
     return () => {
       dispatch(setCategory(''));
+      paginate(1);
     };
   }, []);
 

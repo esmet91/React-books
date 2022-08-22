@@ -1,5 +1,9 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCategory } from '../Redux/Slices/categorySlice';
+
+import { Link } from 'react-router-dom';
+
 function BookPage() {
   React.useEffect(() => {
     window.scrollTo({
@@ -9,15 +13,38 @@ function BookPage() {
   }, []);
 
   const item = useSelector((state) => state.item.item);
+  const dispatch = useDispatch();
+
+  const selectedCategory = (categoryName) => {
+    dispatch(setCategory(categoryName));
+  };
 
   return (
     <>
       <div className="breadcrumds">
         <nav>
           <ul className="breadcrumds__list">
-            <li>Home</li>
-            <li>Discounts and Clearance</li>
-            <li>Sonatini Hippeastrum Alaska</li>
+            <li>
+              <Link className="breadcrumds__link" to="/">
+                Главная страница
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => selectedCategory(item.category)}
+                className="breadcrumds__link"
+                to="/categories">
+                {item.category}
+              </Link>
+            </li>
+            <li>
+              <Link
+                onClick={() => selectedCategory(item.subCategory)}
+                className="breadcrumds__link"
+                to="/categories">
+                {item.subCategory}
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -49,7 +76,7 @@ function BookPage() {
               </div>
             </div>
             <div className="price-book-info__pay">
-              <p className="price-book-info__pay-scure">Ваши покупки безопасны</p>
+              <p className="price-book-info__pay-scure">Безопасные платежи</p>
               <ul className="price-book-info__pay-list">
                 <li>
                   <img src="./src/paypal.png" alt="" />
