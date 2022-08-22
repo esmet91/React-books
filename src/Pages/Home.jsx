@@ -10,6 +10,7 @@ import Tabs from '../components/Tabs';
 function Home({ books }) {
   /*------------получаем массив обьектов для слайдера--------------*/
   const slides = books.filter((obj) => obj.slider);
+
   /*------------/получаем массив обьектов для слайдера--------------*/
 
   /*------------получаем обьект с максимальной скидкой--------------*/
@@ -25,7 +26,7 @@ function Home({ books }) {
       <section className="main__banner banner-main">
         {slides.length > 0 ? (
           <div className="banner-main__slider">
-            <Slider items={books} />
+            <Slider items={slides} />
           </div>
         ) : (
           ''

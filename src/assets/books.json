@@ -14,7 +14,7 @@
   },
   {
     "id": "1",
-    "slider": true,
+    "slider": false,
     "imageUrl": "https://cv9.litres.ru/pub/c/pdf-kniga/cover_415/67230390-evgeniya-bocharova-saharnye-cvety-poshagovyy-gid-po-sozdaniu-cvet-67230390.webp",
     "title": "Сахарные цветы.",
     "author": "Евгения Бочарова",
@@ -26,7 +26,7 @@
   },
   {
     "id": "2",
-    "slider": true,
+    "slider": false,
     "imageUrl": "https://cv2.litres.ru/pub/c/elektronnaya-kniga/cover_415/52270526-mariya-kardakova-snachala-sup-potom-desert.webp",
     "title": "Сначала суп, потом десерт",
     "author": "Мария Кардакова",
@@ -38,7 +38,7 @@
   },
   {
     "id": "3",
-    "slider": true,
+    "slider": false,
     "imageUrl": "https://cv4.litres.ru/pub/c/elektronnaya-kniga/cover_415/29601142-entoni-uilyam-eda-menyauschaya-zhizn-otkroyte-taynuu-silu-ovoschey-fruktov.webp",
     "title": "Еда, меняющая жизнь.",
     "author": "Энтони Уильям",
@@ -149,7 +149,7 @@
   },
   {
     "id": "13",
-    "slider": true,
+    "slider": false,
     "imageUrl": "https://cv8.litres.ru/pub/c/elektronnaya-kniga/cover_415/15082688-aleksey-cellarius-vasha-sobaka-vospitanie-i-uhod-15082688.webp",
     "title": "Собака. Полное руководство по дрессировке и уходу",
     "author": "Алексей Целлариус",
@@ -340,6 +340,7 @@
   },
   {
     "id": "30",
+    "slider": true,
     "imageUrl": "https://cv9.litres.ru/pub/c/elektronnaya-kniga/cover_415/66549392-dzhoan-ketlin-rouling-rozhdestvenskiy-porosenok.webp",
     "title": "Рождественский Поросёнок",
     "author": "Дж. К. Роулинг",
@@ -384,6 +385,7 @@
   },
   {
     "id": "34",
+    "slider": true,
     "imageUrl": "https://ndc.book24.ru/resize/820x1180/iblock/572/57299f2e19bb25a0ef74b7d598bc7908/6011d38c2ece548580fc2046e0003032.jpg",
     "title": "Лисья нора. Книга 1",
     "author": "Нора Сакавич",
@@ -461,6 +463,7 @@
   },
   {
     "id": "41",
+    "slider": true,
     "imageUrl": "https://cdn.book24.ru/v2/ITD000000001246289/COVER/cover13d__w410.webp",
     "title": "Лунный ветер",
     "author": "Ли Бардуго",
