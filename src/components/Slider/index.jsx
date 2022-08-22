@@ -19,7 +19,7 @@ function Slider({ items }) {
   return (
     <div>
       <SliderSlick {...settings} className="main-slider">
-        {items.map((obj) => obj.slider && <Slide key={obj.id} {...obj} />)}
+        {items.map((obj) => obj.slider && <Slide key={obj.id} slides={obj} />)}
       </SliderSlick>
     </div>
   );
