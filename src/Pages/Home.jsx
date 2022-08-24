@@ -32,7 +32,7 @@ function Home({ books }) {
           ''
         )}
 
-        {maxSale && <BanerSale {...maxSale} />}
+        {maxSale && <BanerSale item={maxSale} />}
       </section>
       <section className="main__books-page books-page">
         <div className="books-page__categories categories-menu">
