@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 function Header() {
   const cartItems = useSelector((state) => state.item.itemCart);
+  const totalSum = useSelector((state) => state.item.totalPrice);
 
   return (
     <header className="header">
@@ -45,7 +46,7 @@ function Header() {
                 </div>
               </div>
               <div className="cart-header__bottom bottom-cart">
-                <div className="bottom-cart__price">125.0₽</div>
+                <div className="bottom-cart__price">{totalSum.toFixed(2)}₽</div>
                 <Link to={'/cart'} style={{ display: 'block' }}>
                   <button className="bottom-cart__button">Проверить</button>
                 </Link>
