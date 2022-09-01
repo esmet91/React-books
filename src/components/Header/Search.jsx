@@ -14,42 +14,45 @@ const Search = () => {
     setSearchOnClick(event.target.value);
   };
 
-  const inputSearch = React.useRef();
-
-  // const test = (e) => {
-  //   if (!serchOnClick) {
-  //     if (!e.path.includes(inputSearch.current)) {
-  //       console.log('клик вне инпута');
-  //       setSearchOnClick('');
-  //     }
-  //   }
-  // };
-  // React.useEffect(() => {
-  //   document.body.addEventListener('click', test);
-  // }, []);
-
   return (
-    <form action="#" className="body-header__search search-header">
-      <label ref={inputSearch} className="search-header__label">
-        <input
-          value={serchOnClick}
-          type="text"
-          className="search-header__input"
-          onChange={showInput}
-        />
+    <div className="search">
+      <form action="#" className="search__form">
+        <input value={serchOnClick} onChange={showInput} type="text" className="search__input" />
         <Link to={serchOnClick ? '/searchresult' : '#'}>
-          <button
-            onClick={() => dispatch(setSearchValue(serchOnClick))}
-            className="search-header__button">
-            <svg height="25px" viewBox="0 0 512 512" width="25px">
-              <path d="M344.5,298c15-23.6,23.8-51.6,23.8-81.7c0-84.1-68.1-152.3-152.1-152.3C132.1,64,64,132.2,64,216.3  c0,84.1,68.1,152.3,152.1,152.3c30.5,0,58.9-9,82.7-24.4l6.9-4.8L414.3,448l33.7-34.3L339.5,305.1L344.5,298z M301.4,131.2  c22.7,22.7,35.2,52.9,35.2,85c0,32.1-12.5,62.3-35.2,85c-22.7,22.7-52.9,35.2-85,35.2c-32.1,0-62.3-12.5-85-35.2  c-22.7-22.7-35.2-52.9-35.2-85c0-32.1,12.5-62.3,35.2-85c22.7-22.7,52.9-35.2,85-35.2C248.5,96,278.7,108.5,301.4,131.2z"></path>
+          <button className="search__button" onClick={() => dispatch(setSearchValue(serchOnClick))}>
+            <svg className="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <g id="icons">
+                <path
+                  d="M22.4,19.6l-4.8-4.8c0.9-1.4,1.4-3,1.4-4.8c0-5-4-9-9-9s-9,4-9,9s4,9,9,9c1.8,0,3.4-0.5,4.8-1.4l4.8,4.8   c0.4,0.4,0.9,0.6,1.4,0.6c1.1,0,2-0.9,2-2C23,20.4,22.8,19.9,22.4,19.6z M5,10c0-2.8,2.2-5,5-5s5,2.2,5,5s-2.2,5-5,5S5,12.8,5,10z"
+                  id="search"
+                />
+              </g>
             </svg>
-            Поиск
+            Search
           </button>
         </Link>
-      </label>
-    </form>
+      </form>
+    </div>
   );
 };
 
 export default Search;
+
+{
+  /* <form action="#" className="search__form">
+  <input type="text" className="search__input" />
+  <Link to={serchOnClick ? '/searchresult' : '#'}>
+    <button className="search__button" onClick={() => dispatch(setSearchValue(serchOnClick))}>
+      <svg className="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g id="icons">
+          <path
+            d="M22.4,19.6l-4.8-4.8c0.9-1.4,1.4-3,1.4-4.8c0-5-4-9-9-9s-9,4-9,9s4,9,9,9c1.8,0,3.4-0.5,4.8-1.4l4.8,4.8   c0.4,0.4,0.9,0.6,1.4,0.6c1.1,0,2-0.9,2-2C23,20.4,22.8,19.9,22.4,19.6z M5,10c0-2.8,2.2-5,5-5s5,2.2,5,5s-2.2,5-5,5S5,12.8,5,10z"
+            id="search"
+          />
+        </g>
+      </svg>
+      Search
+    </button>
+  </Link>
+</form>; */
+}
